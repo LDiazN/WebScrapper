@@ -3,7 +3,7 @@
 """
 from scrapy.crawler import CrawlerProcess
 from scrapy         import signals
-from settings import URL_TO_SPIDERS, CRAWLER_SETTINGS
+from .settings import URL_TO_SPIDERS, CRAWLER_SETTINGS
 
 _process = CrawlerProcess(CRAWLER_SETTINGS)
 
