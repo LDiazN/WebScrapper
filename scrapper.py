@@ -7,7 +7,7 @@ from settings import URL_TO_SPIDERS, CRAWLER_SETTINGS
 
 _process = CrawlerProcess(CRAWLER_SETTINGS)
 
-def scrape(url : str, additional_data = {}):
+def scrape(url : str):
     """
         Main scrapper function 
     """
@@ -31,7 +31,7 @@ def scrape(url : str, additional_data = {}):
     _process.start()
 
     # return post processed scrapped objects
-    return _process_items_into_final_data(items)
+    return items
 
 def _get_spider_from_url(url : str):
     """
@@ -44,10 +44,3 @@ def _get_spider_from_url(url : str):
             return URL_TO_SPIDERS[known_url]
 
     raise ValueError(f"Unable to scrap this site: {url}")
-
-
-def _process_items_into_final_data(items):
-    """
-        Post process a list of items returned by the spiders
-    """
-    return items
