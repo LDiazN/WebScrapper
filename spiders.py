@@ -28,6 +28,7 @@ class ElPitazoSpider(scrapy.Spider):
                 + categories
                 + body
                 + author 
+                + tags
         """
 
         # These are simple properties, just get its text with a valid 
