@@ -32,8 +32,8 @@ class ElPitazoSpider(scrapy.Spider):
 
         # These are simple properties, just get its text with a valid 
         # selector
-        title = utils.get_element_text('.tdb-title-text', response) or ""
-        date  = utils.get_element_text('.entry-date', response) or ""
+        title  = utils.get_element_text('.tdb-title-text', response) or ""
+        date   = utils.get_element_text('.entry-date', response) or ""
         author = utils.get_element_text('.tdb-author-name', response) or ""
 
         body = self._get_body(response)
